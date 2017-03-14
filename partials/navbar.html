@@ -1,0 +1,12 @@
+<nav ng-controller="NavCtrl">
+    <div class="nav-wrapper" ng-show="isLoggedIn">
+      <a href="#" class="brand-logo">Trump and the Big Bubble</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li ng-show="isLoggedIn"><a ng-ref="#!/account/tweets">My Tracked Tweets</a></li>
+        <li ng-show="isLoggedIn"><a ng-ref="#!/accout/edit">My Company List</a></li>
+        <li ng-show="isLoggedIn"><a ng-ref="#!/account">My Account</a></li>
+        <li ng-show="!isLoggedIn"><a ng-href="#!/login">Login</a></li>
+        <li ng-show="isLoggedIn"><a ng-href="#!/logout">>Logout</a></li>
+      </ul>
+    </div>
+  </nav>

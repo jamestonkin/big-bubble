@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
-<body ng-app="App">
+<body ng-app="TrumpApp">
 
   <div class="container-fluid" ng-view></div>
 
@@ -26,14 +26,24 @@
   <script type="text/javascript" src="lib/node_modules/lodash/lodash.js"></script>
 
 
-  <!-- APP.JS -->
+  <!-- APP.JS & FBCREDS-->
   <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/values/fb-creds.js"></script>
 
   <!-- NG FACTORIES -->
+  <script type="text/javascript" src="app/factories/AuthFactory.js"></script>
+
 
 
 
   <!-- NG CONTROLLERS -->
+  <script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/AccountCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/CompanyEditCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/StockCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/TrackedTweetsCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/UserCtrl.js"></script>
+
 
 
 
