@@ -1,7 +1,7 @@
 'use strict';
 
 // Login, logout, register, loginGoogle, clever conditional, authfactory
-app.controller("UserCtrl", function($scope, $window, AuthFactory, $location) {
+app.controller("UserCtrl", function($scope, $window, AuthFactory, UserFactory, $location) {
 
   // Run these when controller loads
 	$scope.account = {
@@ -58,17 +58,29 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, $location) {
         console.log("you clicked login with Google");
         AuthFactory.authWithProvider()
         .then(function(result) {
-            $scope.isLoggedIn = true;
-      //       console.log("UserCtrl: user is loggedIn", $scope.isLoggedIn );
-      //       $scope.$apply();
-            user = result.user.uid;
-            console.log("logged in user:", user);
+            var user = result.user.uid;
+            var newName = result.user.displayName;
+            console.log("logged in user name:", newName);
+            $scope.newUser = {
+              uid: user,
+              name: newName
+            };
+            UserFactory.checkNewUser($scope.newUser)
+            .then ((userCollection) => {
+              let collectionLength = Object.keys(userCollection).length;
+              if (collectionLength > 0) {
+                console.log('UID exists', Object.keys(userCollection).length);
+                $window.location.href = "#!/about";
+              } else {
+                console.log('UID does not exist');
+                $scope.addNewUser($scope.newUser);
+              }
+            });
+
             //Once logged in, go to another view
-            // $location.path("/home");
-            $window.location.href = "#!/about";
+
             // $scope.$apply();
-            $window.location.reload(false);
-          }).catch(function(error) {
+        }).catch(function(error) {
             // Handle the Errors.
             console.log("error with google login", error);
             var errorCode = error.code;
@@ -77,8 +89,15 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, $location) {
             var email = error.email;
             // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
-            // ...
-          });
+
+        });
+    };
+
+    $scope.addNewUser = (newUser) => {
+      UserFactory.postNewUser(newUser)
+      .then ( () => {
+        $window.location.href = "#!/about";
+      });
     };
 
 });
