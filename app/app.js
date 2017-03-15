@@ -34,7 +34,8 @@ app.config(function($routeProvider) {
   }).
   when('/about', {
     templateUrl: "partials/about.html",
-    controller: "UserCtrl",
+    //controller: "UserCtrl",
+		resolve: {isAuth}
   }).
   when('/account', {
     templateUrl: "partials/account.html",

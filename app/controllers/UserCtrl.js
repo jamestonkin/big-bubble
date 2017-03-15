@@ -9,6 +9,8 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, $location) {
 		password: ""
 	};
 
+  let user = null;
+
   let logout = () => {
 		console.log("logout clicked");
 		AuthFactory.logoutUser()
@@ -53,25 +55,30 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, $location) {
 	};
 
   $scope.loginGoogle = () => {
-		console.log("you clicked login with Google");
-		AuthFactory.authWithProvider()
-		.then(function(result) {
-	    	var user = result.user.uid;
-	    	console.log("logged in user:", user);
-	    	// Once logged in, go to another view
-	    	$location.path("/items/list"); // Used in search strings
-	    	$scope.$apply();
-	  	}).catch(function(error) {
-	    	// Handle the Errors.
-	    	console.log("error with google login", error);
-	    	var errorCode = error.code;
-	    	var errorMessage = error.message;
-	    	// The email of the user's account used.
-	    	var email = error.email;
-	    	// The firebase.auth.AuthCredential type that was used.
-	    	var credential = error.credential;
-	    	// ...
-	  	});
-	};
+        console.log("you clicked login with Google");
+        AuthFactory.authWithProvider()
+        .then(function(result) {
+            $scope.isLoggedIn = true;
+      //       console.log("UserCtrl: user is loggedIn", $scope.isLoggedIn );
+      //       $scope.$apply();
+            user = result.user.uid;
+            console.log("logged in user:", user);
+            //Once logged in, go to another view
+            // $location.path("/home");
+            $window.location.href = "#!/about";
+            // $scope.$apply();
+            $window.location.reload(false);
+          }).catch(function(error) {
+            // Handle the Errors.
+            console.log("error with google login", error);
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
+    };
 
 });
