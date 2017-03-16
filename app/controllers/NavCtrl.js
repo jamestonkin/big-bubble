@@ -16,4 +16,4 @@ app.controller("NavCtrl", function($scope, $window) {
     }
   });
 
-});
+}); // End Ctrl
