@@ -100,4 +100,4 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, UserFactory, $
       });
     };
 
-});
+}); // End Ctrl

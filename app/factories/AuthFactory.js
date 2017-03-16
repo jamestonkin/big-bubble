@@ -46,7 +46,6 @@ app.factory("AuthFactory", function() {
 		return currentUser;
 	};
 
-
 	let provider = new firebase.auth.GoogleAuthProvider();
 
 	let authWithProvider= function() {
@@ -54,4 +53,5 @@ app.factory("AuthFactory", function() {
   	};
 
 	return {createUser, loginUser, logoutUser, isAuthenticated, getUser, authWithProvider};
-});
+
+}); // End Factory

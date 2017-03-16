@@ -20,14 +20,14 @@ a:visited {
 }
 
 .quote1 {
-  color: blue;
-  border: 1px solid red;
+  color: #0d47a1;
+  border: 1px solid #b71c1c;
   margin: 20px 150px 20px 150px;
 }
 
 .quote2 {
-  color: blue;
-  border: 1px solid red;
+  color: #0d47a1;
+  border: 1px solid #b71c1c;
   margin: 20px 150px 20px 150px;
 }
 
@@ -42,4 +42,26 @@ a:visited {
 
 .aboutdiv p {
   margin-left: 100px;
+}
+
+.dark-blue {
+  color: #0d47a1;
+}
+
+.heading {
+  margin-bottom: 40px;
+}
+
+[type="checkbox"].filled-in:checked + label:after {
+      background-color: #b71c1c;
+      border: 2px #0d47a1 solid;
+}
+
+[type="checkbox"].check-blue:not(:checked) + label:after {
+  border: 2px #0d47a1 solid;
+  background: transparent;
+}
+
+.btn:hover {
+  color: #b71c1c;
 }

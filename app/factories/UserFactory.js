@@ -28,8 +28,22 @@ app.factory("UserFactory", ($q, $http, FBCreds) => {
       });
   };
 
+  let getUserKey = (user) => {
+    return $q((resolve, reject) => {
+      $http.get(`${FBCreds.databaseURL}/users.json?orderBy="uid"&equalTo="${user}"`)
+      .then((userObject) => {
+        console.log('userObject: ', userObject);
+        resolve(userObject);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+    });
+  };
 
 
 
-  return {postNewUser, checkNewUser};
-});
+
+  return {postNewUser, checkNewUser, getUserKey};
+
+}); // End Factory

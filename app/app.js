@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module("TrumpApp", ["ngRoute"]);
+var app = angular.module("TrumpApp", ["ngRoute", "checklist-model"]);
 
 //used to authenticate user when navigating to other views
 let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {
@@ -42,17 +42,17 @@ app.config(function($routeProvider) {
     controller: "AccountCtrl",
     resolve: {isAuth}
   }).
-  when('/account/edit', {
-    templateUrl: "partials/account-edit.html",
+  when('/companylist', {
+    templateUrl: "partials/companylist.html",
     controller: "CompanyEditCtrl",
     resolve: {isAuth}
   }).
-  when('/account/tweets', {
+  when('/tweets/:companyId', {
     templateUrl: "partials/tweets.html",
     controller: "TrackedTweetsCtrl",
     resolve: {isAuth}
   }).
-  when('/account/tweets/:tweetId', {
+  when('/tweets/:companyId/:stock', {
     templateUrl: "partials/stock.html",
     controller: "StockCtrl",
     resolve: {isAuth}

@@ -3,4 +3,4 @@
 app.controller("TrackedTweetsCtrl", function($scope, AuthFactory) {
 
 
-});
+}); // End Ctrl
