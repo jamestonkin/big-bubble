@@ -1,20 +1,19 @@
 'use strict';
 
 app.factory("CompanyListFactory", ($q, $http, FBCreds) => {
-  console.log("hello from CoListfactory");
 
-  let getCompanyList = () => {
-		let companyList = [];
+  let getUserCoList = (userKey) => {
+    let companyList = [];
 		return $q((resolve, reject) => {
-			$http.get(`${FBCreds.databaseURL}/companies.json`)
+			$http.get(`${FBCreds.databaseURL}/users/${userKey}/preferences.json`)
 			.then((compObject) => {
-				let companies = compObject.data;
-				console.log('COMPANIES', companies);
-				Object.keys(companies).forEach((key) => {
+				let userCompanies = compObject.data;
+				console.log('User COMPANIES: ', userCompanies);
+        Object.keys(userCompanies).forEach((key) => {
 					// companies[key].id = key;
-					companyList.push(companies[key]);
+					companyList.push(userCompanies[key]);
 				});
-				resolve(companyList);
+				resolve(userCompanies);
 			})
 			.catch((error) => {
 				reject(error);
@@ -22,20 +21,6 @@ app.factory("CompanyListFactory", ($q, $http, FBCreds) => {
 		});
 	};
 
-  let setPreferences = (userKey, userObjectToEdit) => {
-		return $q((resolve, reject) => {
-			$http.patch(`${FBCreds.databaseURL}/users/${userKey}.json`,
-				JSON.stringify(userObjectToEdit))
-			.then((ObjectFromFirebase) => {
-				resolve(ObjectFromFirebase);
-			})
-			.catch((error) => {
-				reject(error);
-			});
-		});
-
-	};
-
-  return {getCompanyList, setPreferences};
+    return {getUserCoList};
 
 }); // End Factory

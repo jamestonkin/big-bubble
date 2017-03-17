@@ -65,3 +65,26 @@ a:visited {
 .btn:hover {
   color: #b71c1c;
 }
+
+.colistdiv {
+  font-size: 1.5em;
+  margin: 10px 0 10px 0;
+}
+
+.colinks {
+    color: #0d47a1;
+    text-decoration: none;
+    margin: 10px 0 10px 0;
+}
+
+.colinks:hover {
+     color: #0d47a1;
+     text-decoration: none;
+     cursor: pointer;
+}
+
+.colinks:visited {
+     color: #0d47a1;
+     text-decoration: none;
+     cursor: pointer;
+}

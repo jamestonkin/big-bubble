@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <h3 class="center-align dark-blue heading">{{heading}}</h3>
+      <div class="col s5 offset-s1 colistdiv" ng-repeat="userCompany in userCompanyList">
+        <a class="colinks" ng-href="#!/tweets/{{userCompany.id}}">{{userCompany.stock}} - {{userCompany.name}}</a>
+      </div>
+  </div> <!-- row end div -->
+</div> <!-- containter end div -->
