@@ -44,7 +44,7 @@ app.config(function($routeProvider) {
   }).
   when('/companylist', {
     templateUrl: "partials/companylist.html",
-    controller: "CompanyEditCtrl",
+    controller: "CompanyListCtrl",
     resolve: {isAuth}
   }).
   when('/tweets/:companyId', {

@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("AccountCtrl", function($scope, AuthFactory, UserFactory, CompanyListFactory, $routeParams, $location) {
+app.controller("AccountCtrl", function($scope, AuthFactory, UserFactory, AccountFactory, $routeParams, $location) {
 
   $scope.heading = "Select Companies to Track";
   let user = AuthFactory.getUser();
@@ -13,9 +13,10 @@ app.controller("AccountCtrl", function($scope, AuthFactory, UserFactory, Company
      preferences: []
    };
 
-	CompanyListFactory.getCompanyList()
+	AccountFactory.getCompanyList()
 	.then( function(compList) {
 		$scope.companies = compList;
+    console.log('Scope.companies: ', $scope.companies);
 	});
 
   $scope.saveCompanies = function() {
@@ -29,7 +30,7 @@ app.controller("AccountCtrl", function($scope, AuthFactory, UserFactory, Company
         userObjectToEdit.preferences = $scope.arrayOfCompanies.preferences;
       }
       console.log('User Key: ', userKey);
-      CompanyListFactory.setPreferences(userKey, userObjectToEdit)
+      AccountFactory.setPreferences(userKey, userObjectToEdit)
       .then(()=>{
         $location.url("/companylist");
       });
