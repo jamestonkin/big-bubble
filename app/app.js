@@ -52,7 +52,7 @@ app.config(function($routeProvider) {
     controller: "TrackedTweetsCtrl",
     resolve: {isAuth}
   }).
-  when('/tweets/:companyId/:stock', {
+  when('/tweets/:companyId/:tweetId', {
     templateUrl: "partials/stock.html",
     controller: "StockCtrl",
     resolve: {isAuth}

@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <h3 class="center-align dark-blue heading">{{companyPage[0].name}}</h3>
+    <div class="col s5 offset-s1 cotweet" ng-repeat="companyTweet in companyTweets">
+      <a class="colinks" ng-href="#!/tweets/{{companyTweet.id_str}}">{{companyTweet.text}} <p>- {{companyTweet.created_at}}</p></a>
+    </div>
+  </div> <!-- row end div -->
+</div> <!-- containter end div -->
