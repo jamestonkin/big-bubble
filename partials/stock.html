@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h3 class="center-align dark-blue heading">{{stockCo[0].name}}</h3>
+    <div class="tweet-page">
+      <p>{{stockTweet[0].text}}</p>
+      <p>- {{stockTweet[0].created_at}}
+    </div>
+    <div class="tweet-page" ng-repeat="stock in stocks | orderBy: '-'">
+      <p>{{stock.Date}} - {{stock.Open}} - {{stock.Close}}</p>
+    </div>
+  </div> <!-- row end div -->
+</div> <!-- containter end div -->
