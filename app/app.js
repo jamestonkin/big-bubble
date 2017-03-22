@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module("TrumpApp", ["ngRoute", "checklist-model"]);
+var app = angular.module("TrumpApp", ["ngRoute", "checklist-model", "chart.js"]);
 
 //used to authenticate user when navigating to other views
 let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {

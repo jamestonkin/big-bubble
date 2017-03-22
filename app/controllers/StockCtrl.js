@@ -5,6 +5,9 @@ app.controller("StockCtrl", function($scope, $filter, $q, $http, AuthFactory, Us
   $scope.stockCo = [];
   $scope.stockTweet = [];
   let fullCompanyList;
+  $scope.stockPrice = [];
+  $scope.stockDate = [];
+  $scope.colors = ["#0d47a1", "#b71c1c"];
 
   AccountFactory.getCompanyList()
   .then( function(compList) {
@@ -58,7 +61,7 @@ app.controller("StockCtrl", function($scope, $filter, $q, $http, AuthFactory, Us
     var dateObj = Date.parse(`${$scope.stockTweet[0].created_at}`);
     // console.log("Time: ", dateObj);
     var startDateObj = dateObj - (7 * 24 * 60 * 60 * 1000);
-    var endDateObj = dateObj + (14 * 24 * 60 * 60 * 1000);
+    var endDateObj = dateObj + (21 * 24 * 60 * 60 * 1000);
     var startDate = $filter('date')(startDateObj, "yyyy-MM-dd");
     var endDate = $filter('date')(endDateObj, "yyyy-MM-dd");
     // console.log("START DATE: ", startDate);
@@ -67,7 +70,14 @@ app.controller("StockCtrl", function($scope, $filter, $q, $http, AuthFactory, Us
     StockFactory.getStockQuote($scope.stockCo[0].stock, startDate, endDate)
     .then(function(stockNumbers) {
       $scope.stocks = stockNumbers;
+      $scope.stocks.reverse();
       console.log("SCOPE of Stocks: ", $scope.stocks);
+      for (var k = 0; k < $scope.stocks.length; k++) {
+        // var parseNum = parseFloat($scope.stocks[k].Close);
+        $scope.stockPrice.push($scope.stocks[k].Close);
+        $scope.stockDate.push($scope.stocks[k].Date);
+        console.log("Stock Prices; ", $scope.stockPrice);
+      }
     });
   };
 

@@ -5,8 +5,9 @@
       <p>{{stockTweet[0].text}}</p>
       <p>- {{stockTweet[0].created_at}}
     </div>
-    <div class="tweet-page" ng-repeat="stock in stocks | orderBy: '-'">
-      <p>{{stock.Date}} - {{stock.Open}} - {{stock.Close}}</p>
+    <div>
+      <canvas id="line" class="chart chart-line" chart-data="stockPrice" chart-labels="stockDate" chart-colors="colors">
+</canvas
     </div>
   </div> <!-- row end div -->
 </div> <!-- containter end div -->
