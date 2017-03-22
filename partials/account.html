@@ -1,14 +1,23 @@
 <div class="container">
   <div class="row">
     <h3 class="center-align dark-blue heading">{{heading}}</h3>
+    <div class="center-align">
+
+    </div>
     <div class="col s5 offset-s1" ng-repeat="company in companies">
       <input id="{{company.stock}}" class="filled-in check-blue" type="checkbox" checklist-model="arrayOfCompanies.preferences" checklist-value="company.id">
       <label class="dark-blue" for="{{company.stock}}">{{company.stock}} - {{company.name}}</label>
     </div>
   </div>
   <div class="center-align">
-    <a class=" blue darken-4 btn" ng-click="saveCompanies()">
+    <a class="red darken-4 btn check" ng-click="checkAll()">
+      Check All
+    </a>
+    <a class="blue darken-4 btn loginadd" ng-click="saveCompanies()">
       Add Selected Companies
+    </a>
+    <a class="red darken-4 btn check" ng-click="uncheckAll()">
+      Uncheck All
     </a>
   </div>
 </div>  <!-- containter end div -->

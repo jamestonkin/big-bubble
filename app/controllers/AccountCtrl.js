@@ -13,6 +13,14 @@ app.controller("AccountCtrl", function($scope, AuthFactory, UserFactory, Account
      preferences: []
    };
 
+   $scope.uncheckAll = function() {
+    $scope.arrayOfCompanies.preferences = [];
+  };
+
+  $scope.checkAll = function() {
+    $scope.arrayOfCompanies.preferences = $scope.companies.map(function(item) { return item.id; });
+  };
+
 	AccountFactory.getCompanyList()
 	.then( function(compList) {
 		$scope.companies = compList;
