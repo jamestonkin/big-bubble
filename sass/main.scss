@@ -62,6 +62,10 @@ a:visited {
   background: transparent;
 }
 
+.stockbtn {
+  margin-bottom: 20px;
+}
+
 .loginadd:hover {
   color: #b71c1c;
 }
@@ -69,6 +73,10 @@ a:visited {
 .check:hover {
   color: #0d47a1;
 }
+
+// .tweet {
+//   margin: auto;
+// }
 
 .colistdiv {
   font-size: 1.5em;
@@ -96,16 +104,16 @@ a:visited {
 .cotweet {
   font-size: 1.5em;
   margin: 10px 0 10px 0;
-  border: 2px #b71c1c solid;
+  // border: 2px #b71c1c solid;
 }
 
-.tweet-page {
-  font-size: 1.5em;
-  margin: 10px 0 10px 0;
-  border: 2px #b71c1c solid;
-  color: #0d47a1;
-}
-
-.tweet-page p {
-  margin: 10px;
-}
+// .tweet-page {
+//   font-size: 1.5em;
+//   margin: 10px 0 10px 0;
+//   border: 2px #b71c1c solid;
+//   color: #0d47a1;
+// }
+//
+// .tweet-page p {
+//   margin: 10px;
+// }

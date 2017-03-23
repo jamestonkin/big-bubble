@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
     <h3 class="center-align dark-blue heading">{{companyPage[0].name}}</h3>
-    <div class="col s5 offset-s1 cotweet" ng-repeat="companyTweet in companyTweets track by $index">
-      <a class="colinks" ng-href="#!/stock/{{companyPage[0].id}}/{{companyTweet.id_str}}">{{companyTweet.text}} <p>- {{companyTweet.created_at}}</p></a>
+    <div class="cotweet" ng-repeat="companyTweet in companyTweets track by $index">
+      <twitter-widget twitter-widget-id="companyTweet.id_str"></twitter-widget>
+      <a class=" blue darken-4 btn btn-large loginadd stockbtn" ng-href="#!/stock/{{companyPage[0].id}}/{{companyTweet.id_str}}">Click for Stock Price</a>
     </div>
   </div> <!-- row end div -->
 </div> <!-- containter end div -->
