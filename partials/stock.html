@@ -2,8 +2,7 @@
   <div class="row">
     <h3 class="center-align dark-blue heading">{{stockCo[0].name}}</h3>
     <div class="tweet-page">
-      <p>{{stockTweet[0].text}}</p>
-      <p>- {{stockTweet[0].created_at}}
+      <twitter-widget twitter-widget-id="stockTweet[0].id_str"></twitter-widget>
     </div>
     <div>
       <canvas id="line" class="chart chart-line" chart-data="stockPrice" chart-labels="stockDate" chart-colors="colors">
