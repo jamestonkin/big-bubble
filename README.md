@@ -19,7 +19,8 @@ app.constant("FBCreds", {
 	apiKey: "your Firebase Api Key",
 	authDomain: "your Firebase authDomain",
 	databaseURL: "your Firebase database URL"
-});```
+});
+```
 
 
 ## Firebase database
@@ -34,7 +35,8 @@ app.constant("FBCreds", {
         ".indexOn": ["uid"]
       }
 		}
-}```
+}
+```
 
 3. Import the `companies.json` file from the `data` folder into your Firebase database.
 
