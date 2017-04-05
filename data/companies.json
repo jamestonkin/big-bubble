@@ -1,0 +1,357 @@
+{
+	"companies": {
+
+			"aetna": {
+				"keywords": ["aetna", "obamacare", "healthcare"],
+                "id": "aetna",
+				"name": "Aetna Inc",
+				"stock": "AET"
+			
+		},
+
+		
+			"amazon": {
+				"keywords": ["amazon", "bezos"],
+                "id": "amazon",
+				"name": "Amazon.com Inc",
+				"stock": "AMZN"
+			
+		},
+
+		
+			"americanairlines": {
+				"keywords": ["american airlines"],
+                "id": "americanairlines",
+				"name": "American Airlines",
+				"stock": "AAL"
+			
+		},
+
+		
+			"apple": {
+				"keywords": ["apple", "tim cook"],
+                "id": "apple",
+				"name": "Apple Inc",
+				"stock": "AAPL"
+			
+		},
+
+		
+			"boeing": {
+				"keywords": ["boeing"],
+                "id": "boeing",
+				"name": "Boeing Co",
+				"stock": "BA"
+			
+		},
+
+		
+			"delta": {
+				"keywords": ["delta"],
+                "id": "delta",
+				"name": "Delta Airlines, Inc",
+				"stock": "DAL"
+			
+		},
+
+		
+			"facebook": {
+				"keywords": ["facebook"],
+                "id": "facebook",
+				"name": "Facebook Inc",
+				"stock": "FB"
+			
+		},
+
+		
+			"ford": {
+				"keywords": ["ford"],
+                "id": "ford",
+				"name": "Ford Motor Company",
+				"stock": "F"
+			
+		},
+
+		
+			"gm": {
+				"keywords": ["gm"],
+                "id": "gm",
+				"name": "General Motors Company",
+				"stock": "GM"
+			
+		},
+
+		
+			"goldman": {
+				"keywords": ["goldman sachs"],
+                "id": "goldman",
+				"name": "Goldman Sachs Group Inc",
+				"stock": "GS"
+			
+		},
+
+		
+			"intel": {
+				"keywords": ["intel", "Krzanich"],
+                "id": "intel",
+				"name": "Intel Corporation",
+				"stock": "INTC"
+			
+		},
+
+		
+			"lockheed": {
+				"keywords": ["lockheed", "f-35"],
+                "id": "lockheed",
+				"name": "Lockheed Martin Corp",
+				"stock": "LMT"
+			
+		},
+
+		
+			"macys": {
+				"keywords": ["@macys"],
+                "id": "macys",
+				"name": "Macy's Inc",
+				"stock": "M"
+			
+		},
+
+		
+			"nielsen": {
+				"keywords": ["nielsen"],
+                "id": "nielsen",
+				"name": "Nielsen Holdings PLC",
+				"stock": "NLSN"
+			
+		},
+
+		
+			"walmart": {
+				"keywords": ["walmart"],
+                "id": "walmart",
+				"name": "Wal-Mart Stores Inc",
+				"stock": "WMT"
+			
+		},
+
+		
+			"disney": {
+				"keywords": ["disney"],
+                "id": "disney",
+				"name": "Walt Disney Co",
+				"stock": "DIS"
+			
+		},
+
+		
+			"google": {
+				"keywords": ["google"],
+                "id": "google",
+				"name": "Alphabet Inc Class A",
+				"stock": "GOOGL"
+			
+		},
+
+		
+			"softbank": {
+				"keywords": ["softbank"],
+                "id": "softbank",
+				"name": "Softbank Group Corp",
+				"stock": "SFTBF"
+			
+		},
+
+		
+			"fox": {
+				"keywords": ["@foxnews", "@foxandfriends", "@foxnation"],
+                "id": "fox",
+				"name": "21st Century Fox-A",
+				"stock": "FOXA"
+			
+		},
+
+		
+			"rexnord": {
+				"keywords": ["rexnord"],
+                "id": "rexnord",
+				"name": "Rexnord Corp",
+				"stock": "RXN"
+			
+		},
+
+		
+			"toyota": {
+				"keywords": ["toyota"],
+                "id": "toyota",
+				"name": "Toyota Motor Corp",
+				"stock": "TM"
+			
+		},
+
+		
+			"unitedtech": {
+				"keywords": ["carrier"],
+                "id": "unitedtech",
+				"name": "United Tech Corporation",
+				"stock": "UTX"
+			
+		},
+
+		
+			"exxon": {
+				"keywords": ["exxonmobile", "@exxonmobil"],
+                "id": "exxon",
+				"name": "Exxon Mobile Corporation",
+				"stock": "XOM"
+			
+		},
+
+		
+			"chrysler": {
+				"keywords": ["chrysler", "fiat"],
+                "id": "chrysler",
+				"name": "Fiat Chrysler N.V.",
+				"stock": "FCAU"
+			
+		},
+
+		
+			"bayer": {
+				"keywords": ["bayer"],
+                "id": "bayer",
+				"name": "Bayer AG",
+				"stock": "BAYN"
+			
+		},
+
+		
+			"nbc": {
+				"keywords": ["nbc", "@nbcnews", "@nbc"],
+                "id": "nbc",
+				"name": "NBC Comcast",
+				"stock": "CMCSA"
+			
+		},
+
+            
+			"cbs": {
+				"keywords": ["cbs", "@cbs"],
+                "id": "cbs",
+				"name": "CBS Corp",
+				"stock": "CBS"
+			
+		},
+
+		
+			"cnn": {
+				"keywords": ["cnn", "@cnn"],
+                "id": "cnn",
+				"name": "CNN Time Warner",
+				"stock": "TWX"
+			
+		},
+
+		
+			"nyt": {
+				"keywords": ["@nytimes", "nytimes"],
+                "id": "nyt",
+				"name": "New York Times Co",
+				"stock": "NYT"
+			
+		},
+
+		
+			"tmobile": {
+				"keywords": ["t-mobile", "@tmobile", "tmobile"],
+                "id": "tmobile",
+				"name": "T-Mobile US",
+				"stock": "TMUS"
+			
+		},
+
+		
+			"twitter": {
+				"keywords": ["twitter"],
+                "id": "twitter",
+				"name": "Twitter Inc",
+				"stock": "TWTR"
+			
+		},
+
+		
+			"nordstrom": {
+				"keywords": ["nordstrom"],
+                "id": "nordstrom",
+				"name": "Nordstrom Inc",
+				"stock": "JWN"
+			
+		},
+
+		
+			"aflac": {
+				"keywords": ["aflac", "insurance", "obamacare", "healthcare"],
+                "id": "aflac",
+				"name": "AFLAC Incorporated",
+				"stock": "AFL"
+			
+		},
+
+		
+			"travelers": {
+				"keywords": ["travelers", "insurance", "obamacare", "healthcare"],
+                "id": "travelers",
+				"name": "Travelers Companies Inc",
+				"stock": "TRV"
+			
+		},
+
+		
+			"anthem": {
+				"keywords": ["anthem", "insurance", "obamacare", "healthcare"],
+                "id": "anthem",
+				"name": "Anthem",
+				"stock": "ANTM"
+			
+		},
+
+		
+			"corecivic": {
+				"keywords": ["prison", "police"],
+                "id": "corecivic",
+				"name": "Corecivic Inc",
+				"stock": "CXW"
+			
+		},
+
+		
+			"geo": {
+				"keywords": ["prison", "police"],
+                "id": "geo",
+				"name": "Geo Group REIT",
+				"stock": "GEO"
+			
+		  }
+        
+
+    },
+
+	"users": {
+
+		
+			"a": {
+				"uid": "",
+				"name": "",
+                "preferences": ""
+			},
+		 
+			"b": {
+				"uid": "",
+				"name": "",
+                "preferences": ""
+			}
+		
+    }
+        
+
+}
