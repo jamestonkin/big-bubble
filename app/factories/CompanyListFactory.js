@@ -8,7 +8,6 @@ app.factory("CompanyListFactory", ($q, $http, FBCreds) => {
 			$http.get(`${FBCreds.databaseURL}/users/${userKey}/preferences.json`)
 			.then((compObject) => {
 				let userCompanies = compObject.data;
-				console.log('User COMPANIES: ', userCompanies);
         Object.keys(userCompanies).forEach((key) => {
 					// companies[key].id = key;
 					companyList.push(userCompanies[key]);

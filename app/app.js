@@ -7,12 +7,9 @@ let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {
   // console.log("running isAuth");
 	AuthFactory.isAuthenticated()
 	.then ( (userExists) => {
-    console.log("userExists", userExists);
 		if (userExists){
-      console.log("Authenticated, go ahead.");
 			resolve();
 		}else {
-      console.log("Authentication rejected, go away.");
 			reject();
 		}
 	});
