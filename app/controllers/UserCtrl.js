@@ -12,13 +12,10 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, UserFactory, $
   let user = null;
 
   let logout = () => {
-		console.log("logout clicked");
 		AuthFactory.logoutUser()
 		.then(function(data){
-			console.log("logged out?", data);
 			$window.location.url = "#!/login";
 		}, function(error){
-			console.log("error occured on logout");
 		});
 	};
 
@@ -35,32 +32,24 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, UserFactory, $
 	      password: $scope.account.password
 	    })
 	    .then( (userData) => {
-	      console.log("UserCtrl newUser:", userData );
 	      $scope.login();
 	    }, (error) => {
-	        console.log("Error creating user:", error);
 	    });
   	};
 
     $scope.login = () => {
-    	console.log("you clicked login");
     	AuthFactory
 	    .loginUser($scope.account)
 	    .then( () => {
-	        // $scope.isLoggedIn = true;
-	        // console.log("UserCtrl: user is loggedIn", $scope.isLoggedIn );
-	        // $scope.$apply();
 	        $window.location.href = "#!/items/list";
 	    });
 	};
 
   $scope.loginGoogle = () => {
-        console.log("you clicked login with Google");
         AuthFactory.authWithProvider()
         .then(function(result) {
             var user = result.user.uid;
             var newName = result.user.displayName;
-            console.log("logged in user name:", newName);
             $scope.newUser = {
               uid: user,
               name: newName
@@ -69,20 +58,16 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, UserFactory, $
             .then ((userCollection) => {
               let collectionLength = Object.keys(userCollection).length;
               if (collectionLength > 0) {
-                console.log('UID exists', Object.keys(userCollection).length);
                 $window.location.href = "#!/about";
               } else {
-                console.log('UID does not exist');
                 $scope.addNewUser($scope.newUser);
               }
             });
 
             //Once logged in, go to another view
 
-            // $scope.$apply();
         }).catch(function(error) {
             // Handle the Errors.
-            console.log("error with google login", error);
             var errorCode = error.code;
             var errorMessage = error.message;
             // The email of the user's account used.

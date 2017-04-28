@@ -23,7 +23,6 @@ app.factory("TweetFactory", ($q, $http, FBCreds) => {
       $http.get('../../data/tweets15-16.json')
       .then((tweetObject) => {
         let tweetCollection = tweetObject.data;
-        console.log('my tweetCollection16: ', tweetCollection );
         Object.keys(tweetCollection).forEach((key) => {
           tweets16.push(tweetCollection[key]);
         });
@@ -41,7 +40,6 @@ app.factory("TweetFactory", ($q, $http, FBCreds) => {
       $http.get('../../data/tweets-17.json')
       .then((tweetObject) => {
         let tweetCollection = tweetObject.data;
-        console.log('my tweetCollection17: ', tweetCollection );
         Object.keys(tweetCollection).forEach((key) => {
           tweets17.push(tweetCollection[key]);
         });

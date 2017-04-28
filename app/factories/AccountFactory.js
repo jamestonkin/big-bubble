@@ -8,7 +8,6 @@ app.factory("AccountFactory", ($q, $http, FBCreds) => {
 			$http.get(`${FBCreds.databaseURL}/companies.json`)
 			.then((compObject) => {
 				let companies = compObject.data;
-				console.log('COMPANIES', companies);
 				Object.keys(companies).forEach((key) => {
 					// companies[key].id = key;
 					companyList.push(companies[key]);
