@@ -1,3 +1,5 @@
+# NOTICE: Current API is deprecated. Currently looking for a FREE Stock Market Historical Data API
+
 # Trump and the Big Bubble
 
 #### NSS Front End Capstone by James Tonkin
