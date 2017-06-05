@@ -43,7 +43,7 @@ app.constant("FBCreds", {
 3. Import the `companies.json` file from the `data` folder into your Firebase database.
 
 ## Updating 2017 tweets
-1. Go here [Trump Twitter Archive] (https://github.com/bpb27/trump_tweet_data_archive)
+1. Go here [Trump Twitter Archive](https://github.com/bpb27/trump_tweet_data_archive)
 2. Download the latest `condensed_2017.json.zip` file.
 3. Uzip this file.
 4. Rename the `condensed_2017.json` file to `tweets-17.json`
